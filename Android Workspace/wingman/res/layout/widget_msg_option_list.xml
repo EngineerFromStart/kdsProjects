@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:id="@+id/optionListView">
+
+    			<TextView
+	                android:id="@+id/timeText"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:textAlignment="center"
+	                android:text="Now"/>
+
+	             <TextView
+	                 android:id="@+id/dateText"
+	                 android:layout_width="fill_parent"
+	                 android:layout_height="wrap_content"
+	                 android:text="Today"
+	                 android:textAlignment="center" />
+
+	            <TextView
+	                     android:id="@+id/advBtn"
+	                     android:layout_width="fill_parent"
+	                	 android:layout_height="wrap_content"
+	               		 android:textAlignment="center"
+	               		 android:contentDescription="settings"
+	               		 android:text="Settings"/>
+
+				<TextView
+				    android:id="@+id/addBtn"
+				    android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:textAlignment="center"
+	                android:text="Add"/>
+
+</LinearLayout>
