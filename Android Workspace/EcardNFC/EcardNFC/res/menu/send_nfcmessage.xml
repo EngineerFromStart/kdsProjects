@@ -1,8 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item 
-        android:id="@+id/profile"
-        android:title="@string/profile"
-        android:showAsAction="ifRoom"/>
-        <!--        android:showAsAction="ifRoom" is used to show it in action bar on top
-        Other menu such as popup, floating, contextual and stuff is available online-->
-</menu>
