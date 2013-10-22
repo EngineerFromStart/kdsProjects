@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="easyecard.nfc"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- get permissions -->
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- so android app shows up under android market NFC section -->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="easyecard.nfc.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="easyecard.nfc.SendNFCMessage"
+            android:label="@string/title_activity_send_nfcmessage"
+            android:parentActivityName="easyecard.nfc.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="easyecard.nfc.MainActivity" />
+        </activity>
+        
+        <activity
+            android:name="easyecard.nfc.ShowProfiles"
+            android:label="@string/title_activity_show_profiles"
+            android:parentActivityName="easyecard.nfc.SendNFCMessage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="easyecard.nfc.SendNFCMessage" />
+        </activity>
+        
+        <activity
+            android:name="easyecard.nfc.RecieveNFCMessage"
+            android:label="@string/title_activity_recieve_nfcmessage"
+            android:parentActivityName="easyecard.nfc.MainActivity" >
+
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="text/plain" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="easyecard.nfc.MainActivity" />
+        </activity>
+        
+        <activity
+            android:name="easyecard.nfc.StartDownload"
+            android:label="@string/title_activity_start_download"
+            android:parentActivityName="easyecard.nfc.RecieverNFCMessage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="easyecard.nfc.RecieverNFCMessage" />
+        </activity>
+        
+        <activity
+            android:name="easyecard.nfc.WebLogInOut"
+            android:label="@string/title_activity_webview"
+            android:parentActivityName="easyecard.nfc.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="easyecard.nfc.MainActivity" />
+        </activity>
+        
+    </application>
+</manifest>

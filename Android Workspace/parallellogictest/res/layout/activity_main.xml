@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" >
+            </EditText>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+	            <EditText
+	                android:id="@+id/edit_int1"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:inputType="number" />
+	
+	            <EditText
+	                android:id="@+id/edit_float1"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"	                
+	                android:layout_weight="1"
+	                android:inputType="numberDecimal" />    
+	            <EditText
+	                android:id="@+id/edit_int2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:inputType="number" />
+
+	
+	            <EditText
+	                android:id="@+id/edit_float2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:inputType="numberDecimal" />
+	            
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Save" />
+
+    </LinearLayout>
+	
+	<SeekBar
+	    android:id="@+id/editSeekBar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/myList"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+    </ListView>
+
+</LinearLayout>
