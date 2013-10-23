@@ -24,28 +24,25 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-	            <EditText
+	            <com.parallellogic.test.EditTextSeekBar
 	                android:id="@+id/edit_int1"
 	                android:layout_width="0dp"
 	                android:layout_height="wrap_content"
 	                android:layout_weight="1"
 	                android:inputType="number" />
-	
-	            <EditText
+	            <com.parallellogic.test.EditTextSeekBar
 	                android:id="@+id/edit_float1"
 	                android:layout_width="0dp"
 	                android:layout_height="wrap_content"	                
 	                android:layout_weight="1"
 	                android:inputType="numberDecimal" />    
-	            <EditText
+	            <com.parallellogic.test.EditTextSeekBar
 	                android:id="@+id/edit_int2"
 	                android:layout_width="0dp"
 	                android:layout_height="wrap_content"
 	                android:layout_weight="1"
 	                android:inputType="number" />
-
-	
-	            <EditText
+	            <com.parallellogic.test.EditTextSeekBar
 	                android:id="@+id/edit_float2"
 	                android:layout_width="0dp"
 	                android:layout_height="wrap_content"

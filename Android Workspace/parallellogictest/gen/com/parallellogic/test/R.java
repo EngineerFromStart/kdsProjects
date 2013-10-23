@@ -24,25 +24,28 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000e;
+        public static final int action_settings=0x7f080010;
         public static final int editSeekBar=0x7f080006;
         public static final int edit_float1=0x7f080002;
         public static final int edit_float2=0x7f080004;
         public static final int edit_int1=0x7f080001;
         public static final int edit_int2=0x7f080003;
         public static final int edit_name=0x7f080000;
-        public static final int float1=0x7f08000b;
-        public static final int float2=0x7f08000d;
-        public static final int index=0x7f080008;
-        public static final int int1=0x7f08000a;
-        public static final int int2=0x7f08000c;
+        public static final int float1=0x7f08000d;
+        public static final int float2=0x7f08000f;
+        public static final int index=0x7f08000a;
+        public static final int int1=0x7f08000c;
+        public static final int int2=0x7f08000e;
+        public static final int layout=0x7f080008;
         public static final int myList=0x7f080007;
-        public static final int name=0x7f080009;
+        public static final int name=0x7f08000b;
         public static final int save=0x7f080005;
+        public static final int slider=0x7f080009;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int list_item=0x7f030001;
+        public static final int dialog=0x7f030001;
+        public static final int list_item=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f070000;
