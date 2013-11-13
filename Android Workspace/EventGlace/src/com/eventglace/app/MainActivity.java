@@ -21,6 +21,27 @@ public class MainActivity extends Activity implements LiveSqrdDatabaseInterface 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		dbConnection = new LiveSqrdDatabaseCon("https://dev-eventglance.circles.io/", "v1", "123456", this.getClass());
+	   	
+		
+		//should do this in async task so that it happens in background
+		//dbConnection.deleteWithQuery("item", "\"title\":\"test\"");	   	
+		//dbConnection.readWithQuery("item", "\"_id\":\"520bf1c53212bfdf61000004\"");
+			//String createQuery = createItem();
+		//dbConnection.createWithJSON("item", createQuery);
+		//dbConnection.readWithQuery("item", "\"title\":\"New York International Fringe Festival\"");
+		dbConnection.readWithQuery("item", "");   
+		
+		//popup window has to on a UI thread after all system calls are made (oncreate, resume, pause)
+//		findViewById(R.id.mainView).post(new Runnable() {
+//			   public void run() {
+//					
+//					//should be done with UI thread
+//					dbConnection.logInWithWebView(findViewById(R.id.mainView), getBaseContext(), "facebook");
+//			   }
+//		 });
+	}
+	private String createItem() {
 		JSONObject body = new JSONObject();
 		try {
 			body.put("startTime", "12:55 PM");
@@ -30,8 +51,8 @@ public class MainActivity extends Activity implements LiveSqrdDatabaseInterface 
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	   	dbConnection = new LiveSqrdDatabaseCon("https://dev-eventglance.circles.io/", "v1", "123456", this.getClass());
-	   	LiveSqrdItems item = new LiveSqrdItems();
+		
+		LiveSqrdItems item = new LiveSqrdItems();
 		item.setBody(body);
 		item.setBox(new Number[]{10,20});
 		item.setColor("");
@@ -53,21 +74,7 @@ public class MainActivity extends Activity implements LiveSqrdDatabaseInterface 
 		item.setStates(null);
 		item.setTag(new String[]{});
 		item.setTitle("test");
-		
-		//should do this in async task so that it happens in background
-		//dbConnection.readWithQuery("item", "\"_id\":\"520bf1c53212bfdf61000004\"");
-		//dbConnection.createWithJSON("item", item.createQuery());
-		//dbConnection.readWithQuery("item", "\"title\":\"New York International Fringe Festival\"");
-		dbConnection.readWithQuery("item", "");  
-		
-		//popup window has to on a UI thread after all system calls are made (oncreate, resume, pause)
-		findViewById(R.id.mainView).post(new Runnable() {
-			   public void run() {
-					
-					//should be done with UI thread
-					//dbConnection.logInWithWebView(findViewById(R.id.mainView), getBaseContext(), "facebook");
-			   }
-		 });
+		return item.createQuery();
 	}
 	@Override
 	protected void onResume(){
